@@ -3,6 +3,8 @@
   "version": "1.0.1",
   "description": "useful common react utils",
   "module": "dist/index.js",
+  "type": "module",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types",
