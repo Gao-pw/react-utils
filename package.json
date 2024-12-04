@@ -8,6 +8,9 @@
     "types",
     "package.json"
   ],
+  "repository": {
+    "url": "https://github.com/Gao-pw/react-utils"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:tsc": "tsc",
