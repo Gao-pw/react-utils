@@ -1,6 +1,6 @@
 {
   "name": "@siroi/react-utils",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "useful common react utils",
   "module": "dist/index.js",
   "files": [
@@ -14,7 +14,10 @@
     "commit": "easyfront commit",
     "release": "easyfront release"
   },
-  "keywords": ["react", "utils"],
+  "keywords": [
+    "react",
+    "utils"
+  ],
   "author": "siroi",
   "devDependencies": {
     "@maxwell-zhai/easyfront": "^1.1.4",
