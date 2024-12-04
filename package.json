@@ -1,0 +1,32 @@
+{
+  "name": "@siroi/react-utils",
+  "version": "1.0.0",
+  "description": "useful common react utils",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "types",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tsc": "tsc",
+    "commit": "easyfront commit",
+    "release": "easyfront release"
+  },
+  "keywords": ["react", "utils"],
+  "author": "siroi",
+  "devDependencies": {
+    "@maxwell-zhai/easyfront": "^1.1.4",
+    "@types/react": "^18"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "ahooks": "^3"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
