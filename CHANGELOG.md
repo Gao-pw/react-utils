@@ -1,5 +1,12 @@
 
 
+## 1.0.2 (2024-12-04)
+
+
+### 🐛 Bug Fixes
+
+* **package.json**: 增加 types 提示 ([0490a68](https://github.com/Gao-pw/react-utils/commit/0490a68))
+
 ## 1.0.1 (2024-12-04)
 
 
