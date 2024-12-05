@@ -24,6 +24,9 @@
     "utils"
   ],
   "author": "siroi",
+  "dependencies": {
+    "@siroi/fe-utils": "workspace:*"
+  },
   "devDependencies": {
     "@maxwell-zhai/easyfront": "^1.1.4",
     "@types/react": "^18"

@@ -1,0 +1,3 @@
+[submodule "libs/fe-utils"]
+	path = libs/fe-utils
+	url = https://github.com/Gao-pw/fe-utils.git

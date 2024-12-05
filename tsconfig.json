@@ -27,11 +27,12 @@
     /* Modules */
     "module": "ES6",                                /* Specify what module code is generated. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
-    // "moduleResolution": "classic",                     /* Specify how TypeScript looks up a file from a given module specifier. */
+    "moduleResolution": "node",                     /* Specify how TypeScript looks up a file from a given module specifier. */
     "baseUrl": ".",                                  /* Specify the base directory to resolve non-relative module names. */
-    "paths": {
-      "ahooks": ["node_modules/ahooks/es/index.d.ts"],
-    },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    // "paths": {
+    //   "ahooks": ["node_modules/ahooks/es/index.d.ts"],
+    //   "@siroi/fe-utils": ["node_modules/@siroi/fe-utils/types/index.d.ts"]
+    // },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     "rootDirs": ["hooks"],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
@@ -107,5 +108,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["./**/*.ts", "./**/*.tsx"]
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": ["libs", "dist", "types"]
 }
