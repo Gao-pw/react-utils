@@ -25,7 +25,7 @@
   ],
   "author": "siroi",
   "dependencies": {
-    "@siroi/fe-utils": "^0.0.2"
+    "@siroi/fe-utils": "^0.0.4"
   },
   "devDependencies": {
     "@maxwell-zhai/easyfront": "^1.1.4",
