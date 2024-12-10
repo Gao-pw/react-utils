@@ -1,5 +1,17 @@
 
 
+## 1.0.4 (2024-12-10)
+
+
+### ✨ Features
+
+* **package**: 调整 utils 导出方法 ([736ff20](https://github.com/Gao-pw/react-utils/commit/736ff20))
+
+
+### 👷 Build System
+
+* **打包**: 本地打包发布 ([e5db805](https://github.com/Gao-pw/react-utils/commit/e5db805))
+
 ## 1.0.3 (2024-12-05)
 
 
