@@ -1,5 +1,12 @@
 
 
+## 1.0.5 (2024-12-10)
+
+
+### 🐛 Bug Fixes
+
+* **pacckage**: 底层依赖更新 ([7f4d309](https://github.com/Gao-pw/react-utils/commit/7f4d309))
+
 ## 1.0.4 (2024-12-10)
 
 
