@@ -25,16 +25,17 @@
   ],
   "author": "siroi",
   "dependencies": {
-    "@siroi/fe-utils": "^0.0.4"
+    "@siroi/fe-utils": "^1"
   },
   "devDependencies": {
     "@maxwell-zhai/easyfront": "^1.1.4",
+    "@types/node": "^22.10.5",
     "@types/react": "^18"
   },
   "peerDependencies": {
+    "ahooks": "^3",
     "react": "^18",
-    "react-dom": "^18",
-    "ahooks": "^3"
+    "react-dom": "^18"
   },
   "license": "MIT",
   "publishConfig": {
