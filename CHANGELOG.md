@@ -1,5 +1,12 @@
 
 
+## 1.0.6 (2025-01-07)
+
+
+### ✨ Features
+
+* **依赖**: 变更依赖 ([d4d2507](https://github.com/Gao-pw/react-utils/commit/d4d2507))
+
 ## 1.0.5 (2024-12-10)
 
 
