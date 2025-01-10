@@ -1,6 +1,6 @@
 {
   "name": "@siroi/react-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "useful common react utils",
   "module": "dist/index.js",
   "type": "module",
