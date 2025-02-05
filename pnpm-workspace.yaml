@@ -1,3 +1,4 @@
 packages:
   # packages/ 直接子目录中的所有包
   - 'libs/*'
+  - 'document'

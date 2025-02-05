@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "useful common react utils",
   "module": "dist/index.js",
+  "main": "dist/index.js",
   "type": "module",
   "types": "types/index.d.ts",
   "files": [
@@ -25,7 +26,7 @@
   ],
   "author": "siroi",
   "dependencies": {
-    "@siroi/fe-utils": "^1"
+    "@siroi/fe-utils": "workspace:*"
   },
   "devDependencies": {
     "@maxwell-zhai/easyfront": "^1.1.4",
