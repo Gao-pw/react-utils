@@ -10,7 +10,6 @@ export default defineConfig({
     base: "react-utils",
     integrations: [starlight({
         title: '@siroi/react-utils',
-        prerender: false,
         social: {
             github: 'https://github.com/withastro/starlight',
         },
