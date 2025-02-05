@@ -6,8 +6,10 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://gao-pw.github.io",
+    base: "react-utils",
     integrations: [starlight({
-        title: 'My Docs',
+        title: '@siroi/react-utils',
         prerender: false,
         social: {
             github: 'https://github.com/withastro/starlight',
