@@ -1,0 +1,11 @@
+---
+// src/pages/button-demo.astro
+import ComponentDemo from '../CodeComponent/CodeComponent.astro';
+import Button from './index.astro';
+import buttonCode from './index?raw'; // 通过 ?raw 导入源代码
+---
+
+<ComponentDemo src={buttonCode}>
+  <!-- 这里放置你要展示的组件 -->
+  <Button />
+</ComponentDemo>

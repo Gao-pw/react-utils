@@ -1,0 +1,119 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<div class="demo-container">
+  <div class="card p-2">
+    <!-- 组件预览区域 -->
+    <div class="preview">
+      <slot />
+    </div>
+    <div
+      class="flex justify-end pr-4 mb-[0.5rem]"
+      style="margin-top: 0.5rem !important;"
+    >
+      <span style="color: var(--sl-color-text-accent)" class="show-code">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-yuandaima-06"></use>
+        </svg>
+      </span>
+    </div>
+
+    <!-- 代码展示区域 -->
+    <div class="code-block">
+      <button class="copy-button">复制</button>
+      <pre><code class="language-jsx">{src}</code></pre>
+    </div>
+  </div>
+</div>
+
+<script>
+  import init from './clickFun';
+
+  init();
+</script>
+
+<style>
+  /* 容器样式 */
+  .demo-container {
+    border: 1px solid var(--astro-code-foreground);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  .card {
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* 预览区域 */
+  .preview {
+    padding: 2rem;
+    background: var(--sl-color-bg);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 9999;
+    position: relative;
+  }
+
+  /* 代码区块 */
+  .code-block {
+    margin-top: 0 !important;
+    position: relative;
+    background: #f9fafb;
+    display: none;
+    z-index: 9999;
+  }
+
+  .code-block.show {
+    display: block;
+  }
+
+  /* 复制按钮 */
+  .copy-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--sl-color-accent-low);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    opacity: 0.5;
+  }
+
+  .copy-button:hover {
+    background: var(--sl-color-accent);
+    opacity: 1;
+  }
+
+  /* 代码样式 */
+  pre {
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-x: auto;
+  }
+
+  /* 浮动提示 */
+  .copy-toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+  }
+</style>

@@ -8,7 +8,6 @@ function useLocalStorageEffect(fun: Function, keys: string[]){
         ref.current = fun;
 
         const callback = (v: string)=> {
-            console.log('useLocalStorageEffect', v);
             ref.current?.(v);
         }
 
@@ -17,7 +16,7 @@ function useLocalStorageEffect(fun: Function, keys: string[]){
         return () => {
             keys.forEach(key => LocalStorage.removeListen(key, callback));
         }
-
+ 
     }, []);
 }
 

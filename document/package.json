@@ -12,13 +12,16 @@
   "dependencies": {
     "@astrojs/react": "^4.1.6",
     "@astrojs/starlight": "^0.31.1",
-    "@siroi/react-utils": "workspace:*",
+    "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/starlight-tailwind": "3",
     "@siroi/fe-utils": "workspace:*",
+    "@siroi/react-utils": "workspace:*",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "astro": "^5.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.5",
+    "tailwindcss": "^3.4.17"
   }
 }

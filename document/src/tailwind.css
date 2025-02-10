@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+    color: var(--sl-color-text-accent);
+    width: 1em; height: 1em !important;
+    vertical-align: -0.15em !important;
+    fill: currentColor !important;
+    overflow: hidden;
+ }

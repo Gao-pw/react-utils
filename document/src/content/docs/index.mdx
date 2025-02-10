@@ -1,36 +1,32 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: "@siroi/react-utils"
+description: A small but useful library of react utils
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: A small but useful library of react utils!
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/logo.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 快速开始
+      link: /react-utils/home
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid , Badge} from '@astrojs/starlight/components';
 
-## Next steps
+## 特性😃
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Readability" icon="seti:typescript">
+		基于 TypeScript 构建，其静态类型特性为库赋予了超高的健壮性，让你在使用过程中远离恼人的运行时错误。同时，丰富的类型提示和智能补全功能，大幅提升开发效率，助你开发之路一路畅通！
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Mini" icon="document">
+		你是否担心引入新库会让项目臃肿不堪？别担心！本开源库仅有 <Badge text="7.8 kb" variant="success" />，却蕴含强大功能。小体积带来高收益，快速加载，不占资源，让你的项目轻装上阵，性能飙升！而且支持 **tree-shaking** 🎉！！
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Not simple" icon="farcaster">
+		这是从大量项目实战中千锤百炼沉淀出来的通用方法宝库！在无数个实际项目的摸爬滚打中，不断总结经验、优化方案，精心挑选出最实用、最有效的通用方法汇聚于此。无论你是在处理复杂的业务逻辑，还是应对常见的开发难题，这里都能为你提供一站式的解决方案。选择它，就是选择高效开发的捷径！
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Integrated" icon="seti:todo">
+		这里集成了许多实用的方法库！想象一下，你再也不用在茫茫的开源海洋中四处搜寻各种零散的方法库了，所有你需要的强大功能都已经被我们精心挑选并集成在这个小小的库中。从数据处理到界面优化，从常见业务逻辑到特殊场景需求，本库所包含的方法库应有尽有，能够满足你在开发过程中的各种奇思妙想。选择我们的库，就是选择高效开发的捷径，让你的项目开发之路一路畅通！
 	</Card>
 </CardGrid>

@@ -1,0 +1,96 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+
+
+<div class="demo-container">
+  <!-- 组件预览区域 -->
+  <div class="preview">
+    <slot />
+  </div>
+
+  <!-- 代码展示区域 -->
+  <div class="code-block">
+    <button class="copy-button">复制</button>
+    <pre><code class="language-jsx">{src}</code></pre>
+  </div>
+</div>
+
+<script>
+  import { copyText } from '@siroi/fe-utils';
+
+  const buttons = document.querySelectorAll(".copy-button");
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const codeContent = btn?.closest('.code-block')?.querySelector('code')?.textContent;
+      console.log(codeContent);
+      alert('复制成功');
+      copyText(codeContent!)
+    })
+  })
+</script>
+
+<style>
+  /* 容器样式 */
+  .demo-container {
+    border: 1px solid var(--astro-code-foreground);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+
+  /* 预览区域 */
+  .preview {
+    padding: 2rem;
+    background: var(--sl-color-bg);
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* 代码区块 */
+  .code-block {
+    position: relative;
+    background: #f9fafb;
+  }
+
+  /* 复制按钮 */
+  .copy-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .copy-button:hover {
+    background: #2563eb;
+  }
+
+  /* 代码样式 */
+  pre {
+    margin: 0;
+    padding: 2rem !important;
+    overflow-x: auto;
+  }
+
+  /* 浮动提示 */
+  .copy-toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+  }
+</style>

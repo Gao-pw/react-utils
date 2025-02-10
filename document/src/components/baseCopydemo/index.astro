@@ -1,0 +1,13 @@
+<div id="copy-demo-src">
+    点我复制
+</div>
+
+<script>
+    import {copyText} from "@siroi/fe-utils";
+    const btn = document.querySelector("#copy-demo-src");
+    btn?.addEventListener('click', () => {
+        copyText('这是我要复制的内容').then(() => {
+            alert('复制成功')
+        });
+    })
+</script>

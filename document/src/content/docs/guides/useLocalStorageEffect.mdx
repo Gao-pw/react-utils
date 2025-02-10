@@ -1,0 +1,20 @@
+---
+title: useLocalStorageEffect
+description: 监听 localstorage 发生变化的 hook.
+sidebar:
+  badge:
+    text: 实验性
+    variant: caution
+---
+
+监听 localstorage 发生变化的 hook
+
+import Button from "../../../components/Test.astro";
+
+<Button />
+
+可以在 **当前页面** 打开控制台，输入
+```js
+localStorage.setItem('key', 1234);
+```
+观察上面例子中发生的变化
