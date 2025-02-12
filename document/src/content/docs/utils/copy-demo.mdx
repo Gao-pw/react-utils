@@ -1,0 +1,28 @@
+---
+title: copyText
+description: 复制文本方法
+sidebar:
+    order: 3
+    label: 复制文本
+---
+
+用于复制文本的方法，兼容 **http** 环境。
+
+## 基本用法
+
+import CodeComponent from "../../../CodeComponent/CodeComponent.astro";
+import CodeProp from "../../../CodeComponent/CodeProp.tsx";
+import BaseComponent from "../../../components/dictionaryItem/index.astro"
+import BaseComponentRaw from "../../../components/dictionaryItem/index.astro?raw"
+
+
+<CodeComponent src={BaseComponentRaw}>
+    <BaseComponent />
+</CodeComponent>
+
+<CodeProp propsList={[{
+    propName: 'text',
+    description: '要复制的文本',
+    propType: "string",
+}]}/>
+
