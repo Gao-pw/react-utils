@@ -18,7 +18,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:tsc": "tsc",
     "commit": "easyfront commit",
-    "release": "easyfront release"
+    "release": "easyfront release",
+    "util:build": "pnpm run build:tsc",
+    "publish:sub": "pnpm -F '!document' util:build",
+    "build:doc": "pnpm run public:sub && pnpm -F document build"
   },
   "keywords": [
     "react",
