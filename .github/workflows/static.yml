@@ -22,8 +22,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
+  # 下载所有的 submoduls 仓库
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Download all submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+      - name: Upload submodules artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: submodules
+          path: .
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: download  # 指定该作业依赖于 download 作业
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,6 +51,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Download submodules artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: submodules
+      - uses: pnpm/action-setup@v4.0.0
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm run build:doc
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
