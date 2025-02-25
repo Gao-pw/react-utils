@@ -36,7 +36,7 @@ jobs:
           git submodule sync --recursive
           git submodule update --init --recursive
       - name: Upload submodules artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: submodules
           path: .
@@ -52,7 +52,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Download submodules artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: submodules
       - uses: pnpm/action-setup@v4.0.0
